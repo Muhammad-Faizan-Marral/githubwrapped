@@ -17,6 +17,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'res.cloudinary.com',
         port: '',
+      }, {
+        protocol: 'https',
+        hostname: 'api.producthunt.com',
+        port: '',
       }
     ],
   },
