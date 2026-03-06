@@ -13,20 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "2024 Code Wrapped",
-  description: "Generate cool stats for your 2024 season of code",
+  title: "2026 Code Wrapped",
+  description: "Generate cool stats for your 2026 season of code",
   openGraph: {
-    title: "2024 Code Wrapped",
-    description: "Generate cool stats for your 2024 season of code",
+    title: "2026 Code Wrapped",
+    description: "Generate cool stats for your 2026 season of code",
     images: [
       {
         url: "https://res.cloudinary.com/dejzy9q65/image/upload/v1734882716/og_nhu4fu.png",
         width: 1200,
         height: 630,
-        alt: "2024 Code Wrapped",
+        alt: "2026 Code Wrapped",
       },
     ],
-    siteName: "2024 Code Wrapped",
+    siteName: "2026 Code Wrapped",
   },
   twitter: {
     images: [],

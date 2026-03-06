@@ -1,6 +1,7 @@
 import SearchInput from "@/components/UserRecapCard";
 import Image from "next/image";
-import Link from "next/link";
+
+
 const featured = [
   {
     name: "torvalds",
@@ -15,6 +16,7 @@ const featured = [
     bio: "creator of you don't know js",
   },
 ];
+
 export default function Home() {
   return (
     <>
@@ -26,38 +28,21 @@ export default function Home() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 py-32 sm:px-6 lg:px-8 flex flex-col items-center justify-center text-center">
           {/* Hero Title */}
           <h1 className="text-5xl md:text-7xl font-bold font-heading mb-8 animate-slide-down">
-            2024 <span className="text-purple-400">Code Wrapped</span>
+            2026 <span className="text-purple-400">Code Wrapped</span>
           </h1>
 
           {/* Subtitle */}
           <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl mx-auto animate-slide-up">
             Discover your{" "}
-            <span className="font-bold italic text-purple-500">
-              2024 season of code
+            <span className="font-bold  text-purple-500">
+              2026 season of code
             </span>{" "}
             with a year-in-review experience
           </p>
+
           <SearchInput />
-          <Link
-            href="https://x.com/notamit_dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center px-4 py-2 mb-4 hover:bg-purple-700 text-white rounded-full text-sm font-medium transition-colors duration-300 shadow-lg hover:shadow-xl mt-10"
-          >
-            Built with ❤️ by @notamit_dev
-          </Link>
-          <Link
-            href="https://www.producthunt.com/posts/2024-code-wrapped?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-2024&#0045;code&#0045;wrapped"
-            target="_blank"
-          >
-            <Image
-              src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=733756&theme=dark"
-              alt="2024&#0032;Code&#0032;Wrapped - Your&#0032;2024&#0032;season&#0032;of&#0032;code&#0032;and&#0032;growth | Product Hunt"
-              style={{ width: "250px", height: "54px" }}
-              width="250"
-              height="54"
-            />
-          </Link>
+         
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 w-full max-w-4xl mx-auto animate-slide-up">
             <div className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-white/10 hover:border-purple-500/50 transition-all duration-300">
               <i className="fas fa-code-commit text-3xl text-purple-400 mb-4"></i>
@@ -79,6 +64,7 @@ export default function Home() {
           <h1 className="text-xl md:text-3xl font-bold font-heading mb-8 animate-slide-down mt-20">
             <span className="text-purple-400">Featured</span> Profiles
           </h1>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20 w-full animate-slide-u">
             {featured.map((person) => (
               <FeatureComponent
@@ -88,6 +74,7 @@ export default function Home() {
               />
             ))}
           </div>
+          
         </div>
       </section>
     </>

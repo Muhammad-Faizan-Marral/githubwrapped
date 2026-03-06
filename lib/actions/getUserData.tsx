@@ -11,7 +11,7 @@ export async function getUserData(name: string) {
     const yearlyCommits = await GetYearWiseContributions(name);
     const totalCommits = yearlyCommits.reduce(
       (acc, year) => acc + year.contributions,
-      0
+      0,
     );
     const [tag, tagLine] = getNerdLevel(totalCommits);
     const currentYearCommit = yearlyCommits[0].contributions;

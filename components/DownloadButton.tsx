@@ -2,13 +2,8 @@
 import { useCallback } from "react";
 import html2canvas from "html2canvas";
 
-export default function DownloadButton({
-  targetId,
-  name,
-}: {
-  targetId: string;
-  name: string;
-}) {
+export default function DownloadButton({ targetId, name,}: { targetId: string;  name: string;}) {
+  
   const handleDownload = useCallback(async () => {
     try {
       const element = document.getElementById(targetId);

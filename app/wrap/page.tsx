@@ -14,19 +14,16 @@ import {
 import DownloadButton from "@/components/DownloadButton";
 import ReloadButton from "@/components/ReloadButton";
 
-const page = async ({
-  searchParams,
-}: {
-  searchParams: Promise<{ name: string }>;
-}) => {
+const page = async ({searchParams}: {searchParams: Promise<{ name: string }>}) => {
+  
   const { name } = await searchParams;
   if (!name) return <ErrorPage />;
   //default timeout to mock api delay
   const timeout = await getUserData(name);
   if (!timeout) return <ErrorPage />;
   return (
-    <div className="min-h-screen w-full relative bg-purple-900">
-      <audio autoPlay className="absolute -top-0.5 -left-0.5 z-10">
+    <div className="min-h-screen w-full relative bg-purple-900 ">
+      {/* <audio autoPlay className="absolute -top-0.5 -left-0.5 z-10">
         <source
           src={
             timeout?.percentFromPrevYear[0] == "-"
@@ -36,15 +33,15 @@ const page = async ({
           type="audio/mpeg"
         />
         Your browser does not support the audio element.
-      </audio>
+      </audio> */}
       <div className="fixed inset-0 bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 animate-gradient z-0 w-screen h-screen"></div>
       <div className="relative z-10">
-        <p className="z-50 text-white font-bold pt-4 text-center text-lg">
-          your <span className="italic">2024</span> season recap 📈
-        </p>
+        {/* <p className="z-50 text-white font-bold pt-4 text-center text-lg">
+          your <span className="italic">2026</span> season recap 📈
+        </p> */}
         <section className="min-h-screen py-4 px-2 w-full">
           <div className="max-w-lg mx-auto bg-purple-900" id="wrap">
-            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4 border border-white/20 animate-slide-up">
+            <div className="bg-white/10 backdrop-blur-lg rounded-xl p-4  border border-white/20 animate-slide-up">
               {/* User Profile Header */}
               <div className="flex items-center mb-4">
                 <Image
@@ -142,8 +139,8 @@ const page = async ({
                                 index === 0
                                   ? "bg-purple-500"
                                   : index === 1
-                                  ? "bg-blue-500"
-                                  : "bg-green-500"
+                                    ? "bg-blue-500"
+                                    : "bg-green-500"
                               }`}
                               style={{ width: `${lang.percentage}%` }}
                             ></div>
@@ -199,14 +196,12 @@ const page = async ({
                   </div>
                 </div>
               </div>
-              <div className="text-gray-400 text-underline text-center text-base">
-                {" "}
-                wrappedcode.vercel.app
-              </div>
+              
             </div>
           </div>
         </section>
         {/* footer Buttons Section */}
+
         <TooltipProvider>
           <div className="mb-20 flex justify-center items-center gap-3">
             <Tooltip>
@@ -241,6 +236,7 @@ const page = async ({
             </Tooltip>
           </div>
         </TooltipProvider>
+
       </div>
     </div>
   );

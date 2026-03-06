@@ -15,11 +15,7 @@ const chartConfig = {
   },
 } satisfies ChartConfig;
 
-export function GrowthChart({
-  data,
-}: {
-  data: { year: number; contributions: number }[];
-}) {
+export function GrowthChart({ data,}: {  data: {year: number; contributions: number }[];}) {
   const refineData = data
     .map((d) => ({
       year: d.year.toString(),
